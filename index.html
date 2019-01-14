@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>BWOP Runner</title>
+		<meta name="author" content="Arthur Moreau" />
+		<meta name="description" content="BWOP Runner app's page" />
+		<meta name="keywords"  content="arthur, moreau, bwop, runner, mobile, game" />
+
+		<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+	</head>
+
+	<body>
+
+
+		<div id="fullpage">
+		    <div id="mainPage" class="section">
+				<div id="bomb1" class="bomb">
+					<div class="bombBox bombOff"></div>
+				</div>
+				<div id="bomb2" class="bomb">
+					<div class="bombBox bombOff"></div>
+				</div>
+				<div id="boomerang1" class="boomerang">
+					<div class="boomerangBox"></div>
+				</div>
+				<div id="portal1" class="portal">
+					<div class="portalBox"></div>
+				</div>
+				<div id="portal2" class="portal">
+					<div class="portalBox"></div>
+				</div>
+				<div id="mouse1" class="mouse notVisible">
+					<div class="mouseBox"></div>
+				</div>
+				<div id="mouse2" class="mouse notVisible">
+					<div class="mouseBox"></div>
+				</div>
+
+
+				<div class="content">
+					<div class="info">
+						<div> 
+							<h1 class="title">
+							&nbsp;<span class="blue">B</span><span class="green">W</span><span class="red">O</span><span class="yellow">P</span> <br/>
+							<span class="red">R</span><span class="blue">u</span><span class="yellow">n</span><span class="green">n</span><span class="yellow">e</span><span class="red">r</span>
+							</h1>
+							<h3>PLAY WITH YOUR BRAIN</h3>
+						</div>
+						<br/><br/>
+						<div> 
+							<a href="https://www.youtube.com/watch?v=iP6yvrfOfLc&index=1&list=PL91_c_h3odseZkcZvrW0UWk7njdRcih8s" target="_blank"> <img src="img/apple.png" alt="download" width="300" /> </a> 
+							<a href="https://www.youtube.com/watch?v=iP6yvrfOfLc&index=1&list=PL91_c_h3odseZkcZvrW0UWk7njdRcih8s" target="_blank"> <img src="img/google.png" alt="download" width="300" /> </a>
+						</div>
+					</div>	
+				</div>
+
+				<div class="animated dad">
+					<div class="dadBox dadStanding"></div>
+				</div>
+				<div class="animated mum">
+					<div class="mumBox mumStanding"></div>
+				</div>
+				<div id="enemy1" class="animated enemy">
+					<div class="enemyBox enemyRight"></div>
+				</div>
+				<div id="enemy2" class="animated enemy">
+					<div class="enemyBox enemyRight"></div>
+				</div>
+				<div id="enemy3" class="animated enemy">
+					<div class="enemyBox enemyRight"></div>
+				</div>
+
+		    </div>
+
+
+
+		   <!-- <div id="morePage" class="section">
+
+
+		    	Some section
+
+
+		    </div>-->
+		</div>
+
+
+
+
+		<!-- jQuery -->
+		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+		<script src="js/impulse.js"></script>
+		<script src="js/jquery.fullPage.min.js"></script>
+
+
+		<!-- Personalized script -->
+		<script type="text/javascript">
+
+			$(document).ready(function(){ 
+
+				$('#fullpage').fullpage({
+				        scrollingSpeed: 1500
+				    });
+
+				//BOOMERANG
+				var ball = Impulse($('.boomerang'))
+				  .style('translate', function(x, y) {
+				    return x + 'px, ' + y + 'px';
+				  })
+				var x = 0
+				  , y = 0;
+				ball.position(x, y);
+				ball.drag()
+				.on('end', function() {
+				  ball.spring({ tension: 50, damping: 5 }).to(x, y).start();
+				})
+
+				//PORTAL
+				$("#portal1").hover(function () {
+					$(this).toggleClass("noCursor");
+					$("#mouse2").toggleClass("notVisible");
+				});
+				$( "#portal1" ).mousemove(function() {
+				  $( "#mouse2" ).css("left", event.pageX + ($( "#portal2" ).position().left-$( "#portal1" ).position().left) ).css("top", event.pageY+($( "#portal2" ).position().top-$( "#portal1" ).position().top));
+				});
+				$("#portal2").hover(function () {
+					$(this).toggleClass("noCursor");
+					$("#mouse1").toggleClass("notVisible");
+				});
+				$( "#portal2" ).mousemove(function() {
+				  $( "#mouse1" ).css("left", event.pageX-($( "#portal2" ).position().left-$( "#portal1" ).position().left)).css("top", event.pageY-($( "#portal2" ).position().top-$( "#portal1" ).position().top));
+				});
+
+				//BOMB
+				$( ".bomb" ).click(function() {
+					if ( $(this).find('div').hasClass( "bombOff" ) ) {
+						$(this).find('div').addClass( "bombOn" ).removeClass( "bombOff" );
+					}
+				});
+
+				//ANIMATE
+			    setTimeout(function() {
+			        $( ".dad div" ).addClass( "dadRight" ).removeClass( "dadStanding" );
+			        $( ".mum div" ).addClass( "mumRight" ).removeClass( "mumStanding" );
+			    },5000);   
+
+			    setTimeout(function() {
+			        $( ".enemy" ).addClass( "animationPaused" );
+			        $( ".enemy div" ).addClass( "enemyStanding" ).removeClass( "enemyRight" );
+			    },8000);  
+
+			    setTimeout(function() {
+			        $( ".enemy" ).removeClass( "animationPaused" );
+			        $( ".enemy div" ).addClass( "enemyRight" ).removeClass( "enemyStanding" );
+			    },11000);  
+
+				$('#enemy1').each(function () {
+				    if (!$(this).text().match(/^\s*$/)) {
+				        $(this).insertBefore($(this).prev('.mum'));
+				    }
+				});
+
+
+
+				var enemy = $('#enemy1');
+				var e_offset = enemy.offset();
+				var e_width = enemy.width();
+
+				var mum = $('.mum');
+				var m_offset = mum.offset();
+				var m_width = mum.width();
+
+				var e_centerX = e_offset.left + e_width / 2;
+				var m_centerX = m_offset.left + m_width / 2;
+
+
+				$(".mum").css('left', $( document ).width()/2-50);
+				$(".dad").css('left', $( document ).width()/2-160);
+
+				//$("#enemy1").css('left', $( ".mum" ).position().left);
+
+
+			});
+
+		</script>
+
+	</body>
+</html>
+
