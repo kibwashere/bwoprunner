@@ -29,29 +29,43 @@ todo
 ## Actions & Controls
 
 ### Buttons:
-- UP/RIGHT/DOWN/LEFT
-- Action 1 (a1)
-- Action 2 (a2)
-- Action 3 (a3)
-- Pause
+- up/right/down/left
+- action 1 (a1)
+- action 2 (a2)
+- action 3 (a3)
+- pause
 
 ### Movements:
 - up/right/down/left (ladder)
 - right/left (ground/bar)
 - fall
 - not moving (waiting move)
-
-### Interactions:
 - spawn
 - exit teleport
 - die (ground/bomb/enemy/)
-- drop bomb
 - hide
-- slow
-- trap
-- tornado
-- boomrang
-- pickaxe
+
+### Objects:
+
+- Bomb - 
+<img src="https://s3.eu-west-3.amazonaws.com/bwoprunner/git/bomb.png" alt="bomb" width="32" style="image-rendering: pixelated;"/>
+
+- Slow -
+<img src="https://s3.eu-west-3.amazonaws.com/bwoprunner/git/snow.png" alt="slow" width="32" style="image-rendering: pixelated;"/>
+
+- Trap - 
+<img src="https://s3.eu-west-3.amazonaws.com/bwoprunner/git/trap.png" alt="trap" width="32" style="image-rendering: pixelated;"/>
+
+- Tornado - 
+<img src="https://s3.eu-west-3.amazonaws.com/bwoprunner/git/tornado.png" alt="tornado" width="32" style="image-rendering: pixelated;"/>
+
+- Boomrang - 
+<img src="https://s3.eu-west-3.amazonaws.com/bwoprunner/git/boom.png" alt="boomrang" width="32" style="image-rendering: pixelated;"/>
+
+- Pickaxe - 
+<img src="https://s3.eu-west-3.amazonaws.com/bwoprunner/git/pickaxe.png" alt="drawing" width="32" style="image-rendering: pixelated;"/>
+
+
 
 ## Worlds
 1. Forest - Green
