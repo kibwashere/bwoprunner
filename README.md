@@ -47,22 +47,17 @@ todo
 
 ### Objects:
 
-- Bomb - ![bwop](https://s3.eu-west-3.amazonaws.com/bwoprunner/git/bomb.png)
+- Bomb - ![bomb](https://s3.eu-west-3.amazonaws.com/bwoprunner/git/bomb.png)
 
-- Slow -
-<img src="https://s3.eu-west-3.amazonaws.com/bwoprunner/git/snow.png" alt="slow" width="32" style="image-rendering: pixelated;"/>
+- Slow - ![slow](https://s3.eu-west-3.amazonaws.com/bwoprunner/git/snow.png)
 
-- Trap - 
-<img src="https://s3.eu-west-3.amazonaws.com/bwoprunner/git/trap.png" alt="trap" width="32" style="image-rendering: pixelated;"/>
+- Trap - ![trap](https://s3.eu-west-3.amazonaws.com/bwoprunner/git/trap.png)
 
-- Tornado - 
-<img src="https://s3.eu-west-3.amazonaws.com/bwoprunner/git/tornado.png" alt="tornado" width="32" style="image-rendering: pixelated;"/>
+- Tornado - ![tornado](https://s3.eu-west-3.amazonaws.com/bwoprunner/git/tornado.png)
 
-- Boomrang - 
-<img src="https://s3.eu-west-3.amazonaws.com/bwoprunner/git/boom.png" alt="boomrang" width="32" style="image-rendering: pixelated;"/>
+- Boomrang - ![boomrang](https://s3.eu-west-3.amazonaws.com/bwoprunner/git/boom.png)
 
-- Pickaxe - 
-<img src="https://s3.eu-west-3.amazonaws.com/bwoprunner/git/pickaxe.png" alt="drawing" width="32" style="image-rendering: pixelated;"/>
+- Pickaxe - ![pickaxe](https://s3.eu-west-3.amazonaws.com/bwoprunner/git/pickaxe.png)
 
 
 
