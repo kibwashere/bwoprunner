@@ -47,8 +47,7 @@ todo
 
 ### Objects:
 
-- Bomb - 
-<img src="https://s3.eu-west-3.amazonaws.com/bwoprunner/git/bomb.png" alt="bomb" width="32" style="image-rendering: pixelated;"/>
+- Bomb - ![bwop](https://s3.eu-west-3.amazonaws.com/bwoprunner/git/bomb.png)
 
 - Slow -
 <img src="https://s3.eu-west-3.amazonaws.com/bwoprunner/git/snow.png" alt="slow" width="32" style="image-rendering: pixelated;"/>
